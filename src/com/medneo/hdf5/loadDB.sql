@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `loadDB`.`study` (
     FOREIGN KEY (`patient_id`)
     REFERENCES `loadDB`.`patient` (`patient_id`)
     ON DELETE RESTRICT
-    ON UPDATE CASCADE)
+    )
 ENGINE = InnoDB;
 
 
@@ -64,13 +64,11 @@ CREATE TABLE IF NOT EXISTS `loadDB`.`series` (
   CONSTRAINT `fk_study_id`
     FOREIGN KEY (`study_id`)
     REFERENCES `loadDB`.`study` (`study_id`)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE,
+    ON DELETE RESTRICT,
   CONSTRAINT `fk_patient_id_2`
     FOREIGN KEY (`patient_id`)
     REFERENCES `loadDB`.`patient` (`patient_id`)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE)
+    ON DELETE RESTRICT)
 ENGINE = InnoDB;
 
 
@@ -94,18 +92,15 @@ CREATE TABLE IF NOT EXISTS `loadDB`.`image` (
   CONSTRAINT `fk_series_id`
     FOREIGN KEY (`series_id`)
     REFERENCES `loadDB`.`series` (`series_id`)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE,
+    ON DELETE RESTRICT,
   CONSTRAINT `fk_study_id_2`
     FOREIGN KEY (`study_id`)
     REFERENCES `loadDB`.`study` (`study_id`)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE,
+    ON DELETE RESTRICT,
   CONSTRAINT `fk_patient_id_3`
     FOREIGN KEY (`patient_id`)
     REFERENCES `loadDB`.`patient` (`patient_id`)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE)
+    ON DELETE RESTRICT)
 ENGINE = InnoDB;
 
 
@@ -131,18 +126,15 @@ CREATE TABLE IF NOT EXISTS `loadDB`.`instance` (
   CONSTRAINT `fk_series_id_2`
     FOREIGN KEY (`series_id`)
     REFERENCES `loadDB`.`series` (`series_id`)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE,
+    ON DELETE RESTRICT,
   CONSTRAINT `fk_study_id_3`
     FOREIGN KEY (`study_id`)
     REFERENCES `loadDB`.`study` (`study_id`)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE,
+    ON DELETE RESTRICT,
   CONSTRAINT `fk_image_id`
     FOREIGN KEY (`image_id`)
     REFERENCES `loadDB`.`image` (`image_id`)
-    ON DELETE RESTRICT
-    ON UPDATE CASCADE)
+    ON DELETE RESTRICT)
 ENGINE = InnoDB;
 
 
