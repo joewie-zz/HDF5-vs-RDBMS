@@ -18,10 +18,10 @@ USE `loadDB` ;
 CREATE TABLE IF NOT EXISTS `loadDB`.`patient` (
   `patient_id` INT NOT NULL AUTO_INCREMENT,
   `patient_id_diag` VARCHAR(30) NOT NULL,
-  `birth_data` INT NOT NULL,
+  `birth_data` DATE NOT NULL,
   `sex` CHAR(1) NOT NULL,
   `age` TINYINT(2) NOT NULL,
-  `weight` DECIMAL(2,2) NOT NULL,
+  `weight` DECIMAL(4,2) NOT NULL,
   PRIMARY KEY (`patient_id`))
 ENGINE = InnoDB;
 
