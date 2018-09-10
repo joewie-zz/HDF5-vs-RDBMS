@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `loadDB`.`patient` (
   `age` TINYINT(2) NOT NULL,
   `weight` DECIMAL(4,2) NOT NULL,
   PRIMARY KEY (`patient_id`))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -36,15 +36,16 @@ CREATE TABLE IF NOT EXISTS `loadDB`.`study` (
   `study_time` TIME NOT NULL,
   `study_description` VARCHAR(100) NOT NULL,
   `body_part_examined` VARCHAR(30) NOT NULL,
+  `patient_id_diag` VARCHAR(30) NOT NULL,
   `patient_id` INT NOT NULL,
   PRIMARY KEY (`study_id`),
   INDEX `fk_patient_id_idx` (`patient_id` ASC),
   CONSTRAINT `fk_patient_id`
-    FOREIGN KEY (`patient_id`)
-    REFERENCES `loadDB`.`patient` (`patient_id`)
+  FOREIGN KEY (`patient_id`)
+  REFERENCES `loadDB`.`patient` (`patient_id`)
     ON DELETE RESTRICT
-    )
-ENGINE = InnoDB;
+)
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -58,19 +59,20 @@ CREATE TABLE IF NOT EXISTS `loadDB`.`series` (
   `series_time` TIME NULL,
   `series_description` VARCHAR(100) NOT NULL,
   `study_id` INT NOT NULL,
+  `patient_id_diag` VARCHAR(30) NOT NULL,
   `patient_id` INT NOT NULL,
   PRIMARY KEY (`series_id`),
   INDEX `fk_study_id_idx` (`study_id` ASC),
   INDEX `fk_patient_id_idx` (`patient_id` ASC),
   CONSTRAINT `fk_study_id`
-    FOREIGN KEY (`study_id`)
-    REFERENCES `loadDB`.`study` (`study_id`)
+  FOREIGN KEY (`study_id`)
+  REFERENCES `loadDB`.`study` (`study_id`)
     ON DELETE RESTRICT,
   CONSTRAINT `fk_patient_id_2`
-    FOREIGN KEY (`patient_id`)
-    REFERENCES `loadDB`.`patient` (`patient_id`)
+  FOREIGN KEY (`patient_id`)
+  REFERENCES `loadDB`.`patient` (`patient_id`)
     ON DELETE RESTRICT)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -85,24 +87,25 @@ CREATE TABLE IF NOT EXISTS `loadDB`.`image` (
   `largest_image_pixel_value` DECIMAL(2,2) NULL,
   `series_id` INT NOT NULL,
   `study_id` INT NOT NULL,
+  `patient_id_diag` VARCHAR(30) NOT NULL,
   `patient_id` INT NOT NULL,
   PRIMARY KEY (`image_id`),
   INDEX `fk_series_id_idx` (`series_id` ASC),
   INDEX `fk_study_id_idx` (`study_id` ASC),
   INDEX `fk_patient_id_idx` (`patient_id` ASC),
   CONSTRAINT `fk_series_id`
-    FOREIGN KEY (`series_id`)
-    REFERENCES `loadDB`.`series` (`series_id`)
+  FOREIGN KEY (`series_id`)
+  REFERENCES `loadDB`.`series` (`series_id`)
     ON DELETE RESTRICT,
   CONSTRAINT `fk_study_id_2`
-    FOREIGN KEY (`study_id`)
-    REFERENCES `loadDB`.`study` (`study_id`)
+  FOREIGN KEY (`study_id`)
+  REFERENCES `loadDB`.`study` (`study_id`)
     ON DELETE RESTRICT,
   CONSTRAINT `fk_patient_id_3`
-    FOREIGN KEY (`patient_id`)
-    REFERENCES `loadDB`.`patient` (`patient_id`)
+  FOREIGN KEY (`patient_id`)
+  REFERENCES `loadDB`.`patient` (`patient_id`)
     ON DELETE RESTRICT)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -125,18 +128,18 @@ CREATE TABLE IF NOT EXISTS `loadDB`.`instance` (
   INDEX `fk_study_id_idx` (`study_id` ASC),
   INDEX `fk_image_id_idx` (`image_id` ASC),
   CONSTRAINT `fk_series_id_2`
-    FOREIGN KEY (`series_id`)
-    REFERENCES `loadDB`.`series` (`series_id`)
+  FOREIGN KEY (`series_id`)
+  REFERENCES `loadDB`.`series` (`series_id`)
     ON DELETE RESTRICT,
   CONSTRAINT `fk_study_id_3`
-    FOREIGN KEY (`study_id`)
-    REFERENCES `loadDB`.`study` (`study_id`)
+  FOREIGN KEY (`study_id`)
+  REFERENCES `loadDB`.`study` (`study_id`)
     ON DELETE RESTRICT,
   CONSTRAINT `fk_image_id`
-    FOREIGN KEY (`image_id`)
-    REFERENCES `loadDB`.`image` (`image_id`)
+  FOREIGN KEY (`image_id`)
+  REFERENCES `loadDB`.`image` (`image_id`)
     ON DELETE RESTRICT)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
