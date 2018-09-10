@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/HDF5-vs-RDBMS.iml" filepath="$PROJECT_DIR$/HDF5-vs-RDBMS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myArtifactId_main.iml" filepath="$PROJECT_DIR$/.idea/modules/myArtifactId_main.iml" group="myArtifactId" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/myArtifactId_test.iml" filepath="$PROJECT_DIR$/.idea/modules/myArtifactId_test.iml" group="myArtifactId" />
+    </modules>
+  </component>
+</project>
