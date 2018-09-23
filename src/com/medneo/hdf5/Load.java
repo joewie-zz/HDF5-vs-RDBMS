@@ -4,14 +4,16 @@ public class Load {
 
     public static void main(String[] args){
 
-        //loadPatient();
-        loadStudy();
+        loadPatient();
+        //loadStudy();
 
     }
 
     public static void loadPatient(){
 
-        Patient patient = new Patient("ACE4450424023", 20140104, 'F', 62, 74.10);
+        Patient patient = new Patient("AEE4450424023", 20150104, 'M', 62, 82.10);
+
+
 
         PatientDao patientDao = new PatientDaoImpl();
         patientDao.insertPatient(patient);
