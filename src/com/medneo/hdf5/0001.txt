@@ -1,0 +1,32 @@
+ BitsPerPixel = 8
+ DimensionOrder = XYCZT
+ IsInterleaved = false
+ IsRGB = false
+ LittleEndian = false
+ PixelType = uint8
+ Series 0 Name = 0001.jpg
+ SizeC = 1
+ SizeT = 1
+ SizeX = 512
+ SizeY = 512
+ SizeZ = 1
+Location = C:\Users\okerjo01\Desktop\FABIAN_MARKERT\20150506_KNEE_KNEE_KNEECOIL\MR_Seq._3_t2_tirm_cor\0001.jpg
+
+------------------------------------------------------
+(Fiji Is Just) ImageJ 2.0.0-rc-67/1.52d; Java 1.8.0_172 [64-bit]; Windows 10 10.0; 66MB of 12168MB (<1%)
+ 
+Title: 0001.jpg
+Width:  512 pixels
+Height:  512 pixels
+Size:  256K
+Pixel size: 1x1 pixel^2
+ID: -7
+Bits per pixel: 8 (grayscale LUT)
+Display range: 19-255
+No threshold
+ScaleToFit: false
+Uncalibrated
+Path: C:\Users\okerjo01\Desktop\FABIAN_MARKERT\20150506_KNEE_KNEE_KNEECOIL\MR_Seq._3_t2_tirm_cor\0001.jpg
+Screen location: 246,212 (1920x1080)
+No overlay
+No selection
