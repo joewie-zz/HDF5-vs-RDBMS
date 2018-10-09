@@ -1,0 +1,146 @@
+ BitsPerPixel = 16
+ DimensionOrder = XYCZT
+ IsInterleaved = false
+ IsRGB = false
+ LittleEndian = true
+ PixelType = uint16
+ Series 0 Name = Series 0
+ SizeC = 1
+ SizeT = 1
+ SizeX = 384
+ SizeY = 384
+ SizeZ = 1
+0002,0002 Media Storage SOP Class UID #1 = 1.2.840.10008.5.1.4.1.1.4
+0002,0003 Media Storage SOP Instance UID #1 = 1.3.12.2.1107.5.2.19.145226.2017050215055154140237190
+0002,0010 Transfer Syntax UID #1 = 1.2.840.10008.1.2.4.70
+0002,0012 Implementation Class UID #1 = 1.3.6.1.4.1.28841.0.1.0.3.6.0
+0002,0013 Implementation Version Name #1 = MERLIN_360
+0008,0005 Specific Character Set #1 = ISO_IR 100
+0008,0008 Image Type #1 = ORIGINAL\PRIMARY\M\NORM\DIS2D
+0008,0012 Instance Creation Date #1 = 20170502
+0008,0013 Instance Creation Time #1 = 150552.663000
+0008,0016 SOP Class UID #1 = 1.2.840.10008.5.1.4.1.1.4
+0008,0018 SOP Instance UID #1 = 1.3.12.2.1107.5.2.19.145226.2017050215055154140237190
+0008,0020 Study Date #1 = 20170502
+0008,0021 Series Date #1 = 20170502
+0008,0022 Acquisition Date #1 = 20170502
+0008,0023 Content Date #1 = 20170502
+0008,0030 Study Time #1 = 1450
+0008,0031 Series Time #1 = 150552.649000
+0008,0032 Acquisition Time #1 = 150329.035000
+0008,0033 Content Time #1 = 150552.663000
+0008,0050 Accession Number #1 = eaa150424567
+0008,0060 Modality #1 = MR
+0008,0070 Manufacturer #1 = SIEMENS
+0008,0080 Institution Name #1 = Medneo GmbH
+0008,0081 Institution Address #1 = Marburgerstr. 12,Berlin,District,DE,10789
+0008,0100 Code Value #1 = 121327
+0008,0102 Coding Scheme Designator #1 = DCM
+0008,0104 Code Meaning #1 = Full fidelity image, uncompressed or lossless compressed
+0008,1010 Station Name #1 = AWP145226
+0008,1030 Study Description #1 = CERVICAL_THORACIC_SPINE^ROUTINE
+0008,103e Series Description #1 = t2_tse_sag_I-II_
+0008,1040 Institutional Department Name #1 = Department
+0008,1090 Manufacturer's Model Name #1 = Skyra
+0008,1150 Referenced SOP Class UID #1 = 1.2.840.10008.3.1.2.3.3
+0008,1150 Referenced SOP Class UID #2 = 1.2.840.10008.5.1.4.1.1.4
+0008,1150 Referenced SOP Class UID #3 = 1.2.840.10008.5.1.4.1.1.4
+0008,1150 Referenced SOP Class UID #4 = 1.2.840.10008.5.1.4.1.1.4
+0008,1150 Referenced SOP Class UID #5 = 1.2.840.10008.5.1.4.1.1.4
+0008,1155 Referenced SOP Instance UID #1 = 1.3.12.2.1107.5.2.19.145226.30000017050208494901400000002
+0008,1155 Referenced SOP Instance UID #2 = 1.3.12.2.1107.5.2.19.145226.2017050214585395470536592
+0008,1155 Referenced SOP Instance UID #3 = 1.3.12.2.1107.5.2.19.145226.2017050214585386813136589
+0008,1155 Referenced SOP Instance UID #4 = 1.3.12.2.1107.5.2.19.145226.2017050214555511372934584
+0008,1155 Referenced SOP Instance UID #5 = 1.3.12.2.1107.5.2.19.145226.2017050215055154140237190
+0008,2111 Derivation Description #1 = Lossless JPEG compression, selection value 1, point transform 0, compression ratio 2.2552
+0010,0010 Patient's Name #1 = MARKETING^3 TESLA M07
+0010,0020 Patient ID #1 = AAA150424106
+0010,0030 Patient's Birth Date #1 = 20170502
+0010,0040 Patient's Sex #1 = F
+0010,1010 Patient's Age #1 = 021Y
+0010,1020 Patient's Size #1 = 1.77
+0010,1030 Patient's Weight #1 = 67
+0018,0015 Body Part Examined #1 = SPINE
+0018,0020 Scanning Sequence #1 = SE
+0018,0021 Sequence Variant #1 = SK\SP\OSP
+0018,0022 Scan Options #1 = SAT1
+0018,0023 MR Acquisition Type #1 = 2D
+0018,0024 Sequence Name #1 = *tseR2d1rr16
+0018,0025 Angio Flag #1 = N
+0018,0050 Slice Thickness #1 = 3
+0018,0080 Repetition Time #1 = 3500
+0018,0081 Echo Time #1 = 107
+0018,0083 Number of Averages #1 = 2
+0018,0084 Imaging Frequency #1 = 123.247502
+0018,0085 Imaged Nucleus #1 = 1H
+0018,0086 Echo Number(s) #1 = 1
+0018,0087 Magnetic Field Strength #1 = 3
+0018,0088 Spacing Between Slices #1 = 3.3
+0018,0089 Number of Phase Encoding Steps #1 = 640
+0018,0091 Echo Train Length #1 = 16
+0018,0093 Percent Sampling #1 = 80
+0018,0094 Percent Phase Field of View #1 = 100
+0018,0095 Pixel Bandwidth #1 = 190
+0018,1000 Device Serial Number #1 = 145226
+0018,1020 Software Version(s) #1 = syngo MR E11
+0018,1030 Protocol Name #1 = t2_tse_sag_I-II_#G#P#S_CTSP12.01_1
+0018,1251 Transmit Coil Name #1 = Body
+0018,1310 Acquisition Matrix #1 = 384 0 0 307
+0018,1312 In-plane Phase Encoding Direction #1 = COL
+0018,1314 Flip Angle #1 = 150
+0018,1315 Variable Flip Angle Flag #1 = N
+0018,1316 SAR #1 = 0.92581394528134
+0018,1318 dB/dt #1 = 0
+0018,5100 Patient Position #1 = HFS
+0019,100b 0019,100b #1 = 136660
+0019,100f 0019,100f #1 = Normal
+0020,000d Study Instance UID #1 = 1.3.12.2.1107.5.2.19.145226.30000017050208494893900000008
+0020,000e Series Instance UID #1 = 1.3.12.2.1107.5.2.19.145226.2017050215055163910937194.0.0.0
+0020,0011 Series Number #1 = 7
+0020,0012 Acquisition Number #1 = 1
+0020,0013 Instance Number #1 = 11
+0020,0032 Image Position (Patient) #1 = 10.946803686257\-79.518764496437\-60.83400064683
+0020,0037 Image Orientation (Patient) #1 = 4.3e-014\1\4.896e-012\-0.0087265064091\4.897e-012\-0.999961923318
+0020,0052 Frame of Reference UID #1 = 1.3.12.2.1107.5.2.19.145226.2.20170502145034191.0.0.0
+0020,1041 Slice Location #1 = 11.477255164827
+0028,0002 Samples per pixel #1 = 1
+0028,0004 Photometric Interpretation #1 = MONOCHROME2
+0028,0010 Rows #1 = 384
+0028,0011 Columns #1 = 384
+0028,0030 Pixel Spacing #1 = 0.625\0.625
+0028,0100 Bits Allocated #1 = 16
+0028,0101 Bits Stored #1 = 12
+0028,0102 High Bit #1 = 11
+0028,0103 Pixel Representation #1 = 0
+0028,0106 Smallest Image Pixel Value #1 = 0
+0028,0107 Largest Image Pixel Value #1 = 1637
+0028,1050 Window Center #1 = 654
+0028,1051 Window Width #1 = 1246
+0028,1055 Window Center and Width Explanation #1 = WINDOW1
+0051,100a 0051,100a #1 = TA 02:16
+0051,100b 0051,100b #1 = 307*384s
+0051,100c 0051,100c #1 = FoV 240*240
+0051,100d 0051,100d #1 = SP L11.5
+0051,100e 0051,100e #1 = SagTra(0.5)
+0051,100f 0051,100f #1 = BO1;HE3,4;NE1,2;SP1
+Location = C:\Users\okerjo01\Desktop\0003.dcm
+
+------------------------------------------------------
+(Fiji Is Just) ImageJ 2.0.0-rc-67/1.52d; Java 1.8.0_172 [64-bit]; Windows 10 10.0; 73MB of 12168MB (<1%)
+ 
+Title: 0003.dcm
+Width:  240000 microns (384)
+Height:  240000 microns (384)
+Size:  288K
+Resolution:  0.0016 pixels per micron
+Pixel size: 625x625 micron^2
+ID: -5
+Bits per pixel: 16 (unsigned)
+Display range: 0 - 1637
+No threshold
+ScaleToFit: false
+Uncalibrated
+Path: C:\Users\okerjo01\Desktop\0003.dcm
+Screen location: 246,212 (1920x1080)
+No overlay
+No selection
