@@ -29,7 +29,7 @@ public class LineReaderImpl implements LineReader {
 			e.printStackTrace();
 			return null;
 		}
-		String content = buf.toString();
+		String content = new String("");
 		int indexOfEquals = content.lastIndexOf("=");
 		String potentialKey = content.substring(0, indexOfEquals);
 		String potentialVal = content.substring(indexOfEquals);
