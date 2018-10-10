@@ -8,8 +8,10 @@ import java.io.StringReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.EnumMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
@@ -24,10 +26,21 @@ import com.medneo.hdf5.Study;
 public class InputFileProcessor {
 
 	
+	private final Set<Patient> patients;
+	
 	public final String path; 
 	
 	public InputFileProcessor(final String pathToFile){
+		this(pathToFile, new HashSet<>());
+	}
+	
+	public InputFileProcessor(final String pathToFile, final Set<Patient> s){
 		this.path = pathToFile;
+		this.patients = s;
+	}
+	
+	public Set<Patient> getPatient(){
+		return patients;
 	}
 	
 	public void readFileContent() throws IOException{
@@ -45,14 +58,17 @@ public class InputFileProcessor {
 	        
 	        		
 	        ;
-	        //StreamSupport.stream(data.values().spliterator(), true).forEach(System.out::println);;
+	        StreamSupport.stream(data.values().spliterator(), true).forEach(System.out::println);;
 		}
 		// now switch back to not so fancy implementation styles ..
 		final String ps = data.get(ACCEPTED_KEYS.PATIENT_SEX);
 		//that looks weird ..as i really do not understand why date of birth is modeled as int ....
 		int dob = Integer.parseInt(data.get(ACCEPTED_KEYS.PATIENT_BIRTH_DATE).trim());
-		final Patient p = new Patient("not yet covered", -1, ps.trim().equals("F")?'f':'m', dob, -1.0d);
+		final Patient p = new Patient(data.get(ACCEPTED_KEYS.PATIENT_ID), dob, ps.trim().equals("F")?'f':'m', -1, -1.0d);
 		
+		
+		System.out.println(p);
+		this.patients.add(p);
 		// ... no idea where to put that to ...
 		
 		//final String exam

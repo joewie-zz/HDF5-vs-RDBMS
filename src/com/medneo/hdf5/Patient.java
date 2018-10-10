@@ -58,4 +58,10 @@ public class Patient {
     public void setWeight(double weight) {
         this.weight = weight;
     }
+
+	@Override
+	public String toString() {
+		return "Patient [patientIdDiag=" + patientIdDiag + ", dob=" + dob + ", sex=" + sex + ", age=" + age
+				+ ", weight=" + weight + "]";
+	}
 }
