@@ -14,6 +14,39 @@ import java.util.Map.Entry;
  *
  */
 public class LineReaderImpl implements LineReader {
+	
+	public static final Entry<Key, Value> split(String s){
+		int indexOfEquals = s.lastIndexOf("=");
+		if(indexOfEquals == -1){
+			// atm simply returning null
+			return null;
+		}
+		String potentialKey = s.substring(0, indexOfEquals);
+		String potentialVal = s.substring(indexOfEquals + 1);
+		return new Map.Entry<Key, Value>() {
+
+			private Value v = new Value(potentialVal);
+			private final Key key = new Key(potentialKey);
+			@Override
+			public Key getKey() {
+				return key;
+			}
+
+			@Override
+			public Value getValue() {
+				return v;
+			}
+
+			@Override
+			public Value setValue(Value value) {
+				Value r = v;
+				v = value;
+				return r;
+			}
+			
+		};
+		
+	}
 
 	/* (non-Javadoc)
 	 * @see com.medneo.hdf5.fileimport.LineReader#readLine(java.io.Reader)
@@ -23,37 +56,15 @@ public class LineReaderImpl implements LineReader {
 		CharBuffer buf = CharBuffer.allocate(1000);
 				
 		try {
-			toReadFrom.read(buf);
+			while(toReadFrom.read(buf) > -1){}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return null;
 		}
-		String content = new String("");
-		int indexOfEquals = content.lastIndexOf("=");
-		String potentialKey = content.substring(0, indexOfEquals);
-		String potentialVal = content.substring(indexOfEquals);
-		return new Map.Entry<Key, Value>() {
-
-			@Override
-			public Key getKey() {
-				// TODO Auto-generated method stub
-				return new Key(potentialKey);
-			}
-
-			@Override
-			public Value getValue() {
-				// TODO Auto-generated method stub
-				return new Value(potentialVal);
-			}
-
-			@Override
-			public Value setValue(Value value) {
-				// TODO Auto-generated method stub
-				return null;
-			}
-			
-		};
+		buf.flip();
+		String content = buf.toString();
+		return split(content);
 	}
 
 }

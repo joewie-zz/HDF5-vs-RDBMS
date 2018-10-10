@@ -30,7 +30,7 @@ public class LineReaderTest {
 			@Override
 			public Value getValue() {
 				// TODO Auto-generated method stub
-				return new Value("1.2.840.10008.5.1.4.1.1.4");
+				return new Value(" 1.2.840.10008.5.1.4.1.1.4");
 			}
 			
 			@Override
@@ -39,7 +39,9 @@ public class LineReaderTest {
 				return new Key("0002,0002 Media Storage SOP Class UID #1 ");
 			}
 		};
-		assertEquals("why not??", new LineReaderImpl().readLine(new StringReader(input)), expected);
+		final Map.Entry<Key, Value> actual = new LineReaderImpl().readLine(new StringReader(input));
+		assertEquals("keys should match", actual.getKey().name, expected.getKey().name);
+		assertEquals("values should match", actual.getValue().value, expected.getValue().value);
 	}
 
 }
